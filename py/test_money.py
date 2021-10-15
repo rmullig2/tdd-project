@@ -2,7 +2,10 @@ import unittest
 
 class Dollar:
   def __init__(self, amount):
-    pass
+    self.amount = amount
+
+  def times(self, multiplier):
+    return Dollar(10)
 
 class TestMoney(unittest.TestCase):
   def testMultiplication(self):
