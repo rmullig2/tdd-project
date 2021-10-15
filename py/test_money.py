@@ -1,5 +1,8 @@
 import unittest
 
+class Dollar:
+  pass
+
 class TestMoney(unittest.TestCase):
   def testMultiplication(self):
     fiver = Dollar(5)
