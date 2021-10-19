@@ -18,7 +18,7 @@ class TestMoney(unittest.TestCase):
   def testMultiplicationInDollars(self):
     fiveDollars = Money(5, 'USD')
     tenDollars = Money(10, 'USD')
-    self.assertEqual(tenDollars fiveDollars.times(2))
+    self.assertEqual(tenDollars, fiveDollars.times(2))
 
   def testMultiplicationInEuros(self):
     tenEuros = Money(10, 'EUR')
