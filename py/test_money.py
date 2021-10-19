@@ -21,5 +21,12 @@ class TestMoney(unittest.TestCase):
     self.assertEqual(20, twentyEuros.amount)
     self.assertEqual("EUR", twentyEuros.currency)
 
+  def testDivision(self):
+    originalMoney = Money(4002, 'KRW')
+    actualMoneyAfterDivision = originalMoney.divide(4)
+    expectedMoneyAfterDivision = Money(1000.5, 'KRW')
+    self.assertEqual(expectedMoneyAfterDivision.amount, actualMoneyAfterDivision.amount)
+    self.assertEqual(expectedMoneyAfterDivision.currency, actualMoneyAfterDivision.currency)
+
 if __name__ == '__main__':
   unittest.main()
